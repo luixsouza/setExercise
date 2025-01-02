@@ -1,18 +1,31 @@
-## Getting Started
+# Unique User Logger
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é uma aplicação Java que lê registros de log de um arquivo de texto, contabiliza os usuários únicos e exibe o total. Ele utiliza a classe `HashSet` para garantir que não haja duplicação de usuários.
 
-## Folder Structure
+## Estrutura do Projeto
 
-The workspace contains two folders by default, where:
+A estrutura do projeto está organizada da seguinte maneira:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **App.java**: Classe principal que contém a lógica de leitura de arquivos e processamento de usuários únicos.
+- **LogEntry.java**: Classe de entidade que representa um registro de log com informações do usuário e data.
+- **assets/in.txt**: Arquivo de exemplo usado para testar a aplicação.
+- **assets/result.png**: Exemplo visual do resultado gerado.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Como Funciona
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. O programa solicita o caminho do arquivo de log de entrada.
+2. Cada linha do arquivo deve conter o nome do usuário e o timestamp em formato ISO 8601, separados por espaço.
+3. O programa analisa os dados, armazena os registros únicos e exibe a contagem de usuários únicos.
 
-## Dependency Management
+### Exemplo de Entrada
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Arquivo `src/assets/in.txt`:
+
+### Exemplo Visual de saída
+
+A imagem abaixo ilustra a execução do programa:
+
+![Exemplo Visual](src/assets/result.png)
+
+
+
